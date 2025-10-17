@@ -1,3 +1,65 @@
+🧩 Основные операторы и примеры кода
+
+🔹 Java — основные конструкции
+
+Используются в алгоритмах сортировки и поиска:
+public class Test {
+    public static void main(String[] args) {
+        int[] testArray = {23, 56, 21, 41, 12};
+        selectionSort(testArray);
+        System.out.print("Отсортированный массив: ");
+        printArray(testArray);
+    }
+
+    public static void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) minIndex = j;
+            }
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+    }
+}
+Ключевые элементы:
+ • for — проход по массиву
+ • if — проверка условия
+ • int[] — массив чисел
+ • System.out.print — вывод результата
+ • public static void main — точка входа в программу
+
+⸻
+Python — основные конструкции
+Используются для реализации тех же алгоритмов в другом синтаксисе:
+
+class Test:
+    @staticmethod
+    def insertion_sort(arr):
+        for i in range(1, len(arr)):
+            key = arr[i]
+            j = i - 1
+            while j >= 0 and arr[j] > key:
+                arr[j + 1] = arr[j]
+                j -= 1
+            arr[j + 1] = key
+
+    @staticmethod
+    def main():
+        test_array = [15, 8, 42, 4, 23, 16]
+        print("Исходный массив:", test_array)
+        Test.insertion_sort(test_array)
+        print("Отсортированный массив:", test_array)
+
+ Ключевые элементы:
+ • class и @staticmethod — структура класса и методов
+ • for и while — циклы
+ • if — проверка условий
+ • print() — вывод информации
+ • return — возврат значения из функции
+
+⸻
 📘 Алгоритмы и структуры данных
 
 🔹 Сортировка выбором (Selection Sort)
